@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px; /* Espacio agregado */
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 72px; /* Cambio de tamaño del título */
+            color: white; /* Cambio de color */
+            margin-left: 40px; /* Correlo a la derecha */
+        }
+
+        h2 {
+            font-size: 24px; /* Cambio de tamaño */
+            margin-top: 10px;
+            color: #666;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f5f5f5;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+            width: 150px;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .book {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            background-color: black; /* Cambio de color de fondo para los libros */
+            color: white; /* Cambio de color de texto para los libros */
+            margin-right: 10px;
+            margin-bottom: 20px;
+            width: calc(33.33% - 10px);
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #inicio {
+            background-color: #444;
+            color: #888;
+            padding: 20px;
+        }
+
+        /* Agregar estilos para las columnas */
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Espacio para "ESPARTA" */
+        .spacer {
+            flex-basis: 100%;
+            height: 20px;
+        }
+
+        /* Estilos para ESPARTA */
+        #esp_art {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 600px;
+            color: grey; /* Cambio de color */
+            position: absolute;
+            left: 4;
+            top: 4;
+            bottom: 400;
+            width: 100px; /* Ancho ajustado */
+            text-align: center;
+        }
+    </style>
+    <title>El Librero de la Esparta</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>El Librero de la Esparta</h1>
+            <h2 style="margin-right: 20px;">Un rincón de conocimiento y fantasía</h2>
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar libros...">
+            <button class="search-button">Buscar</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#inicio">Inicio</a>
+                <div class="dropdown">
+                    <a href="#inicio">Libros Destacados</a>
+                </div>
+            </li>
+            <!-- Categorias eliminadas -->
+            <li>
+                <a href="#puntos-fisicos">Puntos Físicos</a>
+                <div class="dropdown">
+                    <a href="#puntos-fisicos">El Librero de la Esparta</a>
+                </div>
+            </li>
+            <li>
+                <a href="#sobre-nosotros">Sobre Nosotros</a>
+                <div class="dropdown">
+                    <a href="#sobre-nosotros">Conócenos</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <div id="esp_art">ESPARTA</div> <!-- ESPARTA en vertical -->
+            <h2>Libros Destacados</h2>
+            <!-- Contenedor de libros en doble columna -->
+            <div class="book-container">
+                <div class="book">
+                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/0d/30/0d30665fd8b3d4e5860cd17a4d9fddcd.jpg" alt="El Extranjero">
+                    <h3>El Extranjero</h3>
+                    <p>Autor: Albert Camus</p>
+                    <p>Categoría: Drama</p>
+                    <p>Precio: $15.99</p>
+                </div>
+
+                <!-- Otros libros destacados -->
+                <div class="book">
+                    <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/ed/5c/ed5cae98094dc5b0a284132f68cf31b5.jpg" alt="El Bosón de Higgs no te va a hacer la cama">
+                    <h3>El Bosón de Higgs no te va a hacer la cama</h3>
+                    <p>Autor: Javier Santaolalla</p>
+                    <p>Precio: $80,000</p>
+                </div>
+
+                <div class="book">
+                    <img src="https://p.calameoassets.com/211111040604-3e783e32079aca230522fca39f01327e/p1.jpg" alt="La República de Platón">
+                    <h3>La República de Platón</h3>
+                    <p>Autor: Platón</p>
+                    <p>Precio: $15,000</p>
+                </div>
+
+                <div class="book">
+                    <img src="https://proassetspdlcom.cdnstatics2.com/usuaris/libros/fotos/311/original/portada_habitos-atomicos_james-clear_202002111200.jpg" alt="Hábitos Atómicos">
+                    <h3>Hábitos Atómicos</h3>
+                    <p>Autor: James Clear</p>
+                    <p>Precio: $18,000</p>
+                </div>
+
+                <div class="book">
+                    <img src="https://static.wikia.nocookie.net/esharrypotter/images/9/9a/Harry_Potter_y_la_Piedra_Filosofal_Portada_Espa%C3%B1ol.PNG/revision/latest/scale-to-width-down/1200?cb=20151020165725" alt="Harry Potter y la Piedra Filosofal">
+                    <h3>Harry Potter y la Piedra Filosofal</h3>
+                    <p>Autor: J.K. Rowling</p>
+                    <p>Precio: $20,000</p>
+                </div>
+
+                <div class="book">
+                    <img src="https://www.lamusica.com.co/cdn/shop/products/img20221006_15233816.jpg?v=1665087920">
+                    <h3>El Señor de los Anillos</h3>
+                    <p>Autor: J.R.R. Tolkien</p>
+                    <p>Precio: $30,000</p>
+                </div>
+
+                <div class="book">
+                    <img src="https://www.planetadelibros.com.co/usuaris/libros/fotos/330/m_libros/portada_satanas_mario-mendoza_202101262127.jpg" alt="Satanás">
+                    <h3>Satanás</h3>
+                    <p>Autor: Mario Mendoza</p>
+                    <p>Precio: $14,000</p>
+                </div>
+
+                <!-- Más libros recomendados -->
+                <div class="book">
+                    <img src="https://images.cdn2.buscalibre.com/fit-in/360x360/a1/cb/a1cb9be7ff9e9571cec505aae8d056d7.jpg" alt="Historia del Tiempo">
+                    <h3>Historia del Tiempo</h3>
+                    <p>Autor: Stephen Wawking 1</p>
+                    <p>Precio: $12,000</p>
+                </div>
+
+                <div class="book">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Las_48_Leyes_del_Poder_cover.svg/1200px-Las_48_Leyes_del_Poder_cover.svg.png" alt="Las 48 Leyes Del PODER">
+                    <h3>Las 48 Leyes Del PODER</h3>
+                    <p>Autor: Robert Greene</p>
+                    <p>Precio: $60,000</p>
+                </div>
+
+                <div class="book">
+                    <img src="https://i.ebayimg.com/images/g/p88AAOSwNzZh~Gxp/s-l1200.webp" alt="Meditaciones">
+                    <h3>Meditaciones</h3>
+                    <p>Autor: Marco Aurelio</p>
+                    <p>Precio: $20,000</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="puntos-fisicos">
+            <h2>Puntos Físicos</h2>
+            <div class="location">
+                <h3>El Librero de la Esparta</h3>
+                <p>Calle 35b #27-109</p>
+                <p>Barrio Villas del Ensueño</p>
+                <p>Marinilla, Antioquia</p>
+                <p>Horario de Atención: 10:00 AM - 9:00 PM (Lunes a Sábado)</p>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>En el rincón impreso de la vasta red virtual, emerge una ventana hacia mundos inexplorados: El Librero de la Esparta. En el fragor de la era digital, donde los bytes desplazan a los suspiros y las pantallas eclipsan los anhelos, nace este rincón de palabras y silencios. ¿Quién es el arquitecto de esta quimérica morada? Un soñador de dieciséis años, Felipe, trae consigo las llaves de un lugar donde la tinta danza con la imaginación y las páginas son senderos hacia la comprensión.
+
+            Mas no está solo en esta epopeya, pues junto a él, entrelazando sus deseos y anhelos, están Cristian y Elizabeth, co-creadores que suman sus voces al coro de las historias. Fue en el año 2023, en la cuna de Marinilla, Colombia, donde este proyecto halló su aliento inicial. Y ¿con qué propósito? El universo en papel que es El Librero de la Esparta busca ser el puente entre continentes literarios, ofreciendo un tesoro de libros provenientes de todos los rincones del globo. Pero no solo eso, sus estantes virtuales también atesoran el eco de los sucesos regionales, inmortalizando los latidos de la Esparta en las páginas de los periódicos.
+
+            En la encrucijada de lo palpable y lo etéreo, la creación de Felipe y sus camaradas nos recuerda que, pese a los vientos digitales que soplan, la pasión por las historias perdura. Como un faro de luz literaria, El Librero de la Esparta invita a los curiosos de todas las edades a sumergirse en una experiencia donde las palabras se tornan mapas y los folios, portales hacia mundos desconocidos.
+
+            Así, en este capítulo de la historia tejido con letras y sueños, Felipe y su camarilla nos demuestran que la juventud es el cincel con el que se tallan las realidades. Su visión nos invita a explorar, a leer entre líneas y a valorar la belleza en cada página girada. Recordemos, entonces, que la creación no tiene edad, y que las palabras tienen el poder de crear universos y forjar conexiones indelebles.
+
+            Escrito por Felipe, un soñador de dieciséis años que, como un alquimista de historias, dio vida al Librero de la Esparta, un refugio para aquellos que buscan la magia en cada palabra impresa.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 El Librero de la Esparta. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
